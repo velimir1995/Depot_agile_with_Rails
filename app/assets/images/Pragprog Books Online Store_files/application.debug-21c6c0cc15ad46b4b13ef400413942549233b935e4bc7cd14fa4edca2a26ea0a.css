@@ -1,0 +1,572 @@
+@charset "UTF-8";
+/* line 6, app/assets/stylesheets/carts.scss */
+.carts table {
+  border-collapse: collapse;
+}
+
+/* line 9, app/assets/stylesheets/carts.scss */
+.carts td {
+  padding: 0.5em;
+}
+
+/* line 12, app/assets/stylesheets/carts.scss */
+.carts td.quantity {
+  white-space: nowrap;
+}
+
+/* line 15, app/assets/stylesheets/carts.scss */
+.carts td.quantity::after {
+  content: " ×";
+}
+
+/* line 18, app/assets/stylesheets/carts.scss */
+.carts td.price {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* line 23, app/assets/stylesheets/carts.scss */
+.carts tfoot th, .carts tfoot th.price {
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+/* line 27, app/assets/stylesheets/carts.scss */
+.carts tfoot th {
+  text-align: right;
+}
+
+/* line 30, app/assets/stylesheets/carts.scss */
+.carts tfoot th.price {
+  border-top: solid thin;
+}
+
+/* line 34, app/assets/stylesheets/carts.scss */
+.carts input[type="submit"] {
+  background-color: #881;
+  border-radius: 0.354em;
+  border: solid thin #441;
+  color: white;
+  font-size: 1em;
+  padding: 0.354em 1em;
+}
+
+/* line 42, app/assets/stylesheets/carts.scss */
+.carts input[type="submit"]:hover {
+  background-color: #992;
+}
+@keyframes line-item-highlight {
+  0% {
+    background: #8f8;
+  }
+  100% {
+    background: none;
+  }
+}
+
+/* line 14, app/assets/stylesheets/line_items.scss */
+.line-item-highlight {
+  animation: line-item-highlight 1s;
+}
+/* line 5, app/assets/stylesheets/products.scss */
+.products {
+  margin: 0;
+  padding: 0.5em;
+}
+
+/* line 8, app/assets/stylesheets/products.scss */
+.products a {
+  padding: 0.354em 0.5em;
+  border-radius: 0.354em;
+}
+
+/* line 12, app/assets/stylesheets/products.scss */
+.products table {
+  border-collapse: collapse;
+}
+
+/* line 15, app/assets/stylesheets/products.scss */
+.products td {
+  padding: 0.5em;
+  margin: 0;
+}
+
+/* line 19, app/assets/stylesheets/products.scss */
+.products tr.list_line_odd {
+  background-color: #effeef;
+}
+
+/* line 22, app/assets/stylesheets/products.scss */
+.products td.image {
+  display: none;
+}
+
+@media (min-width: 30em) {
+  /* line 22, app/assets/stylesheets/products.scss */
+  .products td.image {
+    display: block;
+  }
+  /* line 31, app/assets/stylesheets/products.scss */
+  .products td.image img {
+    height: 11.3em;
+  }
+}
+
+/* line 38, app/assets/stylesheets/products.scss */
+.products td.description h1 {
+  font-size: 1.4em;
+}
+
+/* line 43, app/assets/stylesheets/products.scss */
+.products td.actions ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* line 46, app/assets/stylesheets/products.scss */
+.products td.actions ul li {
+  padding: 0.5em 0.5em;
+}
+
+/* line 52, app/assets/stylesheets/products.scss */
+.products tfoot td {
+  padding: 0.5em 0;
+}
+/* line 1, app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+}
+
+/* line 6, app/assets/stylesheets/scaffolds.scss */
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 11, app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 16, app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+
+/* line 19, app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+
+/* line 22, app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 26, app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 29, app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 32, app/assets/stylesheets/scaffolds.scss */
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 36, app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 39, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 44, app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 51, app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 60, app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 64, app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 5, app/assets/stylesheets/store.scss */
+.store {
+  max-width: 80em;
+}
+
+/* line 7, app/assets/stylesheets/store.scss */
+.store ul.catalog {
+  border-top: solid 0.250em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 12, app/assets/stylesheets/store.scss */
+.store ul.catalog li {
+  padding: 1em;
+  margin: 0;
+  border-bottom: solid thin #ddd;
+}
+
+/* line 18, app/assets/stylesheets/store.scss */
+.store ul.catalog li::after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+
+/* line 23, app/assets/stylesheets/store.scss */
+.store ul.catalog li img {
+  float: left;
+  padding: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0.176em 0.176em 0.354em 0px rgba(0, 0, 0, 0.75);
+}
+
+/* line 30, app/assets/stylesheets/store.scss */
+.store ul.catalog li .price {
+  font-size: 1.414em;
+}
+
+/* line 34, app/assets/stylesheets/store.scss */
+.store ul.catalog form, .store ul.catalog div {
+  display: inline;
+}
+
+/* line 37, app/assets/stylesheets/store.scss */
+.store ul.catalog input[type="submit"] {
+  background-color: #282;
+  border-radius: 0.354em;
+  border: solid thin #141;
+  color: white;
+  font-size: 1em;
+  padding: 0.354em 1em;
+}
+
+/* line 45, app/assets/stylesheets/store.scss */
+.store ul.catalog input[type="submit"]:hover {
+  background-color: #141;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 17, app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, app/assets/stylesheets/application.scss */
+header.main {
+  text-align: center;
+  background: #282;
+  margin: 0;
+}
+
+@media (min-width: 30em) {
+  /* line 21, app/assets/stylesheets/application.scss */
+  header.main {
+    text-align: left;
+  }
+}
+
+/* line 28, app/assets/stylesheets/application.scss */
+header.main h1 {
+  display: none;
+}
+
+/* line 32, app/assets/stylesheets/application.scss */
+.content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+@media (min-width: 30em) {
+  /* line 32, app/assets/stylesheets/application.scss */
+  .content {
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+  }
+}
+
+/* line 44, app/assets/stylesheets/application.scss */
+.content nav {
+  padding-bottom: 1em;
+  background: #141;
+  text-align: center;
+}
+
+@media (min-width: 30em) {
+  /* line 44, app/assets/stylesheets/application.scss */
+  .content nav {
+    text-align: left;
+    padding: 1em;
+  }
+}
+
+/* line 53, app/assets/stylesheets/application.scss */
+.content nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 30em) {
+  /* line 53, app/assets/stylesheets/application.scss */
+  .content nav ul {
+    padding-right: 1em;
+  }
+}
+
+/* line 60, app/assets/stylesheets/application.scss */
+.content nav ul li {
+  margin: 0;
+  padding: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.354em;
+}
+
+/* line 65, app/assets/stylesheets/application.scss */
+.content nav ul li a {
+  color: #bfb;
+  text-decoration: none;
+}
+
+/* line 69, app/assets/stylesheets/application.scss */
+.content nav ul li a:hover {
+  background: none;
+  color: white;
+}
+
+/* line 77, app/assets/stylesheets/application.scss */
+.content main {
+  padding: 0.5em;
+}
+
+/* line 80, app/assets/stylesheets/application.scss */
+.content #PlaytimeAddedTime {
+  color: #bfb;
+  text-decoration: none;
+}
+
+/* line 85, app/assets/stylesheets/application.scss */
+.notice, #notice {
+  background: #ffb;
+  border-radius: 0.5em;
+  border: solid 0.177em #882;
+  color: #882;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em 1.414em;
+  text-align: center;
+}
+
+/* line 96, app/assets/stylesheets/application.scss */
+#cart article {
+  background: white;
+  border-radius: 0.5em;
+  margin: 1em;
+  padding: 1.414em;
+}
+
+/* line 97, app/assets/stylesheets/application.scss */
+#cart article h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 30em) {
+  /* line 96, app/assets/stylesheets/application.scss */
+  #cart article {
+    margin: 0;
+  }
+}
+
+/* line 110, app/assets/stylesheets/application.scss */
+.depot_form {
+  padding: 0 1em;
+}
+
+/* line 112, app/assets/stylesheets/application.scss */
+.depot_form h1 {
+  font-size: 1.99em;
+  line-height: 1.41em;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+/* line 118, app/assets/stylesheets/application.scss */
+.depot_form .field, .depot_form .actions {
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+/* line 122, app/assets/stylesheets/application.scss */
+.depot_form .actions {
+  text-align: right;
+  padding: 1em 0;
+}
+
+/* line 126, app/assets/stylesheets/application.scss */
+.depot_form input, .depot_form textarea, .depot_form select, .depot_form option {
+  border: solid thin #888;
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+/* line 133, app/assets/stylesheets/application.scss */
+.depot_form label {
+  padding: 0.5em 0;
+}
+
+/* line 136, app/assets/stylesheets/application.scss */
+.depot_form input[type="submit"] {
+  background-color: #bfb;
+  border-radius: 0.354em;
+  border: solid thin #888;
+  color: black;
+  font-size: 1.41em;
+  font-weight: bold;
+  padding: 0.354em 1em;
+}
+
+/* line 145, app/assets/stylesheets/application.scss */
+.depot_form input[type="submit"]:hover {
+  background-color: #9d9;
+}
+
+/* line 149, app/assets/stylesheets/application.scss */
+.depot_form #error_explanation {
+  background-color: white;
+  border-radius: 1em;
+  border: solid thin red;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+/* line 156, app/assets/stylesheets/application.scss */
+.depot_form #error_explanation h2 {
+  background: none;
+  color: red;
+  font-size: 1.41em;
+  line-height: 1.41em;
+  padding: 1em;
+}
+
+/* line 163, app/assets/stylesheets/application.scss */
+.depot_form #error_explanation ul {
+  margin-top: 0;
+}
+
+/* line 165, app/assets/stylesheets/application.scss */
+.depot_form #error_explanation ul li {
+  color: red;
+  font-size: 1em;
+}
+
+/* line 171, app/assets/stylesheets/application.scss */
+.depot_form .field_with_errors {
+  background: none;
+  color: red;
+  width: 100%;
+}
+
+/* line 175, app/assets/stylesheets/application.scss */
+.depot_form .field_with_errors label {
+  font-weight: bold;
+}
+
+/* line 178, app/assets/stylesheets/application.scss */
+.depot_form .field_with_errors label::before {
+  content: "! ";
+}
+
+/* line 181, app/assets/stylesheets/application.scss */
+.depot_form .field_with_errors input, .depot_form .field_with_errors textarea {
+  background: pink;
+}
+
+/* line 186, app/assets/stylesheets/application.scss */
+nav.logged_in_nav {
+  border-top: solid thin #bfb;
+  padding: 0.354em 0;
+  margin-top: 0.354em;
+}
+
+/* line 190, app/assets/stylesheets/application.scss */
+nav.logged_in_nav input[type="submit"] {
+  background: none;
+  border: none;
+  color: #bfb;
+  font-size: 1em;
+  letter-spacing: 0.354em;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* line 202, app/assets/stylesheets/application.scss */
+nav.logged_in_nav input[type="submit"]:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=application.css-a7132c43cc77b7afb9e424c39c3d6d8f9cc22c64c57df1d8b7253ae52ae04049.map */
