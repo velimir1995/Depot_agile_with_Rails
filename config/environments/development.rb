@@ -77,5 +77,6 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :test
   config.middleware.use I18n::JS::Middleware
+  config.active_storage.service = :local
 
 end
