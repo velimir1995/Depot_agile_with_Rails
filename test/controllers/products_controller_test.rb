@@ -11,7 +11,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'p', 3
     assert_select 'tr td h1', 3
-    #OVDE?
   end
 
   test "should get new" do

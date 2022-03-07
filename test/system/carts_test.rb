@@ -17,7 +17,7 @@ class CartsTest < ApplicationSystemTestCase
     click_on "Create Cart"
 
     assert_text "Cart was successfully created"
-    click_on "Back"
+    #click_on "Back"
   end
 
   test "updating a Cart" do
@@ -27,7 +27,7 @@ class CartsTest < ApplicationSystemTestCase
     click_on "Update Cart"
 
     assert_text "Cart was successfully updated"
-    click_on "Back"
+    #click_on "Back"-maybe to change this to ckeck redirect
   end
 
   test "destroying a Cart" do

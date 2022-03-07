@@ -15,7 +15,7 @@ end
 module AuthenticationHelpers
   
   def login_as(user)
-    if respond_to? :visit
+    if respond_to? :visit 
       visit login_url
       fill_in :name, with: user.name
       fill_in :password, with: 'secret'
