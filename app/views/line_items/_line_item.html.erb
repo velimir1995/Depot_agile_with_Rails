@@ -6,5 +6,8 @@
   <td class="quantity"><%= line_item.quantity %></td>
   <td><%= line_item.product.title %></td>
   <td class="price"><%= number_to_currency(line_item.total_price) %></td>
-  <% #<td><%= button_to 'Remove item', line_item_path, method: :delete,  params: { id: line_item.product_id } </td> %>
+  <% if defined?(session) %>
+  <td><%= button_to 'Remove item',  line_item,
+                            method: :delete %></td>
+  <% end %>
 </tr>

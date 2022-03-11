@@ -7,7 +7,9 @@
     <% @products.each do |product| %>
       <% cache product do %>
         <li>
+          <%= link_to line_items_path(product_id: product, locale: I18n.locale), method: :create do %>
           <%= image_tag(product.image_url, class: ' list_image') %>
+          <% end %>
           <h2><%= product.title %></h2>
           <p>
             <%= sanitize(product.description) %>
