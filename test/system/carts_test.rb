@@ -38,4 +38,21 @@ class CartsTest < ApplicationSystemTestCase
 
     assert_text "Your cart is currently empty"
   end
+
+  test "displaying a Cart" do
+    visit store_index_url
+    click_on "Add to Cart", match: :first
+
+    assert_selector ".actions"
+  end
+
+  test "not displaying a Cart" do
+    visit store_index_url
+    assert_selector '.actions', :count => 0
+    click_on "Add to Cart", match: :first
+    accept_confirm do
+      click_on "Empty"
+    end
+    assert_selector '.actions', :count => 0
+  end
 end
