@@ -12,6 +12,7 @@ another_one:
   email: velja@example.org
   pay_type: Check
   created_at: <%= 2.days.ago %>
+
 other_customer:
   name: Chris Jones
   address: 456 Somewhere Ln
@@ -23,3 +24,15 @@ two:
   address: MyText
   email: MyString
   pay_type: 1
+
+three:
+  name: Petar Petrovic
+  address: Perina 51
+  email: pera@peracompany.rs  
+  pay_type: Credit card
+  
+four:
+  name: Mita Mitic
+  address: Mitina 3
+  email: mita@mit.com
+  pay_type: Purchase order

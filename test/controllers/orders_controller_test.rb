@@ -24,8 +24,18 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create order" do
-    assert_difference('Order.count') do
+    credit_card_pay_type_order = orders(:three)
+    purchase_pay_type_order = orders(:four)
+    assert_difference('Order.count', 3) do
       post orders_url, params: { order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type } }
+      post orders_url, params: { order: { address: credit_card_pay_type_order.address, 
+                                        email: credit_card_pay_type_order.email, 
+                                        name: credit_card_pay_type_order.name, 
+                                        pay_type: credit_card_pay_type_order.pay_type } }
+      post orders_url, params: { order: { address: purchase_pay_type_order.address, 
+                                        email: purchase_pay_type_order.email, 
+                                        name: purchase_pay_type_order.name, 
+                                        pay_type: purchase_pay_type_order.pay_type } }
     end
 
     assert_redirected_to store_index_url(locale: 'en')
