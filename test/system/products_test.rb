@@ -46,4 +46,25 @@ class ProductsTest < ApplicationSystemTestCase
 
     assert_text "Product was successfully destroyed"
   end
+
+  test "highlighting an updated product" do 
+    visit products_url
+    click_on "Edit", match: :first
+    new_window = open_new_window 
+    within_window new_window do 
+      visit store_index_url
+    end
+
+    fill_in "Description", with: @product.description
+    fill_in "Image url", with: @product.image_url
+    fill_in "Price", with: @product.price
+    fill_in "Title", with: "Karel The Robot in a Nutshell"
+    click_on "Update Product"
+
+    visit store_index_url
+    
+    within_window new_window do
+      assert_selector ".product-highlight"
+    end
+  end
 end
