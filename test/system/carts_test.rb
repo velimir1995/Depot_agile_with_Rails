@@ -55,4 +55,11 @@ class CartsTest < ApplicationSystemTestCase
     end
     assert_selector '.actions', :count => 0
   end
+
+  test "send invalid carts attempt email" do
+    visit cart_url(id: "winnie pooh")
+    mail = ActionMailer::Base.deliveries.last
+    assert_equal ["vgvozdenac.vg@gmail.com"], mail.to
+    assert_equal 'An error occurred', mail.subject
+  end
 end

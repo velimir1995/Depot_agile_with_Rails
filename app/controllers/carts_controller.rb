@@ -71,6 +71,8 @@ class CartsController < ApplicationController
 
   def invalid_cart
     logger.error "Attempt to access invalid cart #{params[:id]}"  
+    #send email to system admin-I'm not sure about deliver later
+    ErrorReportMailer.send_report("Someone attempted to reach invalid shoping cart").deliver_later
     redirect_to store_index_url, notice: 'Invalid cart'
   end
   
