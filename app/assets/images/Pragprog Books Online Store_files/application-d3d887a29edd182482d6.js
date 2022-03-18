@@ -3272,7 +3272,7 @@ Copyright © 2018 Basecamp, LLC
         }, i = function i(t) {
           return r(t) ? "script" : n(t) ? "stylesheet" : void 0;
         }, o = function o(t) {
-          return "reload" === t.getAttribute("data-turbolinks-track");
+          //return "reload" === t.getAttribute("data-turbolinks-track");
         }, r = function r(t) {
           var e;
           return e = t.tagName.toLowerCase(), "script" === e;
