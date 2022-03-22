@@ -43,7 +43,7 @@
           <li><a href="/contact"><%= t('.contact') %></a></li>
           <% unless session[:user_id] %>
           <li><a href="/login">login</a></li>
-          <% end %>
+          <%  end %>
           <li id="PlaytimeAddedTime"><%= Time.current %></li>
         </ul>
         <% if session[:user_id] %>
