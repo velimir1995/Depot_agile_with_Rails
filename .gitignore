@@ -38,3 +38,8 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+	app/javascript/components/
+	app/javascript/packs/server_rendering.js
+	chromedriver_linux64.zip
+	package-lock.json
