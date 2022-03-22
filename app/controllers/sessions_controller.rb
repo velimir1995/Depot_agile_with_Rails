@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(name: params[:name])
     if User.all.size == 0
-      redirect_to users_url, name: params[:name], password: params[:password]
+      session[:user_id] = "very_first"
     end
 
     if user.try(:authenticate, params[:password])
