@@ -58,7 +58,7 @@ Product.create!(title: 'Programming Crystal',
       </p>},
   image_url: 'crystal.jpg',
   price: 40.00)
- User.create!(
+User.create!(
       name: 'admin_username',
       password: 'Secret',
       password_confirmation: 'Secret'
