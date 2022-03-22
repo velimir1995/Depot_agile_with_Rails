@@ -7,9 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if User.all.size == 0
       session[:user_id] = "very_first"
-    end
-
-    if user.try(:authenticate, params[:password])
+    elsif user.try(:authenticate, params[:password])
       session[:user_id] = user.id
       redirect_to admin_url
     else
