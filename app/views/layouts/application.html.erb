@@ -44,7 +44,7 @@
           <% unless session[:user_id] %>
           <li><a href="/login">login</a></li>
           <%  end %>
-          <li id="PlaytimeAddedTime"><%= Time.current %></li>
+          <li id="PlaytimeAddedTime"><%= l(Time.now) %></li>
         </ul>
         <% if session[:user_id] %>
           <nav class = "loged_in_nav">
