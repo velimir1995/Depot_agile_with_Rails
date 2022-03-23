@@ -76,4 +76,7 @@ en:
         expiration_date: "Expiry"
       purchase_order_pay_type:
         po_number: "PO #"
+  line_items:
+    line_item:
+      remove_item: "Remove Item"
   thanks: "Thank you for your order"

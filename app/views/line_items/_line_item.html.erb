@@ -7,6 +7,6 @@
   <td><%= line_item.product.title %></td>
   <td class="price"><%= number_to_currency(line_item.total_price) %></td>
   <% if defined?(session) %>
-  <td><%= button_to 'Remove item', line_item, method: :delete %></td>
+  <td><%= button_to t('.remove_item'), line_item, method: :delete %></td>
   <% end %>
 </tr>
